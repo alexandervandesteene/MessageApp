@@ -1,0 +1,13 @@
+li div
+{
+	display: inline-block;
+	float: right;
+}
+
+li span
+{
+	display: inline-block;
+	margin-top: 16px;
+}
+
+#edit div.ui-slider-switch { width: 8em; }

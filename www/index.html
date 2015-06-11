@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<!-- manifest="cache.manifest"> -->
+	<head>
+		<title>Howest Todo's</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+		<link rel="stylesheet" href="todo.css" />
+
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+		<script src="todo.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript">
+            app.initialize();
+        </script>
+	</head>
+
+	<body>
+	
+		<div id="todo" data-role="page">
+	
+			<div data-role="header">
+				<h1>Todo</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#todo" class="ui-btn-active ui-state-persist">Messages</a></li>
+						<li><a href="#gebruikers">Users</a></li>
+					</ul>
+				</div>
+			</div>
+	
+			<div data-role="main" class="ui-content">
+	
+				<ul id="todos" data-role="listview" data-inset="true">
+					<li data-role="list-divider" id="persoonlijk">
+						<span>Berichten</span>
+						<div><a href="#new" class="ui-btn ui-mini ui-btn-inline ui-corner-all ui-icon-plus ui-btn-icon-left" id="newP">New</a></div>
+					</li>
+				</ul>
+
+			</div>
+			
+		</div>
+	
+	
+		<div id="gebruikers" data-role="page">
+	
+			<div data-role="header">
+				<h1>Todo</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#todo">Messages</a></li>
+						<li><a href="#gebruikers" class="ui-btn-active ui-state-persist">Users</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+	
+			<div data-role="main" class="ui-content">
+	
+				<a class="ui-btn ui-corner-all" id="importcontact">import Contacts</a>
+	
+				<form id="usersForm">
+					<label for="users">Sign on as</label>
+					<ul id="users" data-role="listview" data-inset="true">
+					</ul>			
+				</form>	
+	
+			</div>
+		</div>
+	
+		<div id="new" data-role="page">
+	
+			<div data-role="header">
+  				<a href="#todo" class="ui-btn ui-icon-delete ui-btn-icon-left">Back</a>
+				<h1>Nieuw</h1>
+  				<a href="#todo" class="ui-btn ui-icon-check ui-btn-icon-left" id="create">Send</a>
+			</div>
+	
+			<div data-role="main" class="ui-content">
+				<form>
+					<textarea id="message" placeholder="Message"></textarea>
+				</form>
+			</div>
+	
+		</div>
+
+		<div id="edit" data-role="page">
+	
+			<div data-role="header">
+				<a href="#todo" data-icon="delete">Back</a>
+				<h1>Modify</h1>
+				<a href="#todo" data-icon="check" id="save">Store</a>
+			</div>
+	
+			<div data-role="main" class="ui-content">
+	
+				<form id="saveForm">
+					<a href="#todo" id="delete" class="ui-btn" data-icon="minus" data-inline="true">Remove</a>
+				</form>
+
+			</div>
+	
+	</body>
+</html>
